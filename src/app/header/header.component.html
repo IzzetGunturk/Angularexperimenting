@@ -1,0 +1,16 @@
+<div class="nav-container">
+  <nav class="navbar">
+    <a routerLink="/"><img src="assets/logo.png" id="navbar-logo"></a>
+    <div class="menu-toggle" id="mobile-menu" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-menu" [class.active]="isMenuActive">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-links">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" class="nav-links">About</a></li>
+      <li><a routerLink="/test" routerLinkActive="active" class="nav-links">test</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" class="nav-links">Contact</a></li>
+    </ul>
+  </nav>
+</div>

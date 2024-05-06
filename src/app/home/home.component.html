@@ -1,0 +1,32 @@
+<div class="orders">
+  <div class="order-screen">
+    <h2>Bestellingen</h2>
+    <div class="order-list">
+      <div class="order-item" *ngFor="let order of orders; let i = index">
+        <div class="order-info" (click)="toggleOrder(i)">
+          <h3>Bestelling #{{ order.id }}</h3>
+          <p>Gerecht: {{ order.orders }}</p>
+        </div>
+        <div class="order-details" *ngIf="expandedOrderIndex === i">
+          <p>TEST</p>
+          <p>TEST</p>
+          <p>TEST</p>
+          <p>TEST</p>
+          <p>TEST</p>
+          <p>TEST</p>
+          <p>TEST</p>
+        </div>
+        <div class="order-actions">
+          <button class="btn btn-primary">Details</button>
+          <button class="btn btn-danger">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="side-bar">
+    <p>test</p>
+    <p>test</p>
+    <p>test</p>
+    <p>test</p>
+  </div>
+</div>

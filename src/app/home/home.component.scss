@@ -1,0 +1,46 @@
+.orders {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.side-bar {
+  background-color: #374151;
+  padding: 50px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.order-screen {
+  padding: 50px;
+
+}
+
+.order-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.order-item {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  background-color: #374151;
+  padding: 20px;
+}
+
+.order-info {
+  color: #fff;
+
+  h3 {
+    color: #fff;
+  }
+}
+
+.order-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}

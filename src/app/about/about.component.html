@@ -1,0 +1,13 @@
+<nz-carousel nzAutoPlay>
+    <div nz-carousel-content class="blue-slide">
+      <h3>Blauwe Dia</h3>
+    </div>
+    <div nz-carousel-content>
+      <h3>Standaard Dia</h3>
+    </div>
+    <div nz-carousel-content class="red-slide">
+      <h3>Rode Dia</h3>
+    </div>
+</nz-carousel>
+
+<nz-switch [(ngModel)]="switchValue" (ngModelChange)="onSwitchChange($event)"></nz-switch>
