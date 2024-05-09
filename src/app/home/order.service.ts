@@ -13,4 +13,9 @@ export class OrderService {
   getOrders(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  markOrderAsDone(orderId: number): Observable<any> {
+    const url = `${this.apiUrl}/${orderId}`;
+    return this.http.delete<any>(url); // Assumptie: DELETE-request om een order te verwijderen
+  }
 }

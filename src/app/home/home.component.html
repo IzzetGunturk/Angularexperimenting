@@ -2,31 +2,27 @@
   <div class="order-screen">
     <h2>Bestellingen</h2>
     <div class="order-list">
-      <div class="order-item" *ngFor="let order of orders; let i = index">
-        <div class="order-info" (click)="toggleOrder(i)">
+      <div class="order-item" *ngFor="let order of orders.slice(0, 4); let i = index">
+        <div class="order-info">
           <h3>Bestelling #{{ order.id }}</h3>
           <p>Gerecht: {{ order.orders }}</p>
         </div>
         <div class="order-details" *ngIf="expandedOrderIndex === i">
-          <p>TEST</p>
-          <p>TEST</p>
-          <p>TEST</p>
-          <p>TEST</p>
-          <p>TEST</p>
-          <p>TEST</p>
-          <p>TEST</p>
+          <p>Ordered: 2-4-2024 13:40</p>
+          <p>Bergstraat  57, 6215 AA Wijchen</p>
+          <p>Pick up: 18:45</p>
         </div>
         <div class="order-actions">
-          <button class="btn btn-primary">Details</button>
-          <button class="btn btn-danger">Done</button>
+          <button class="btn btn-primary" (click)="toggleOrder(i)">Details</button>
+          <button class="btn btn-danger" (click)="markOrderAsDone(order.id)">Done</button>
         </div>
       </div>
     </div>
   </div>
   <div class="side-bar">
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
+    <h3>Coming soon...</h3>
+      <p *ngFor="let order of orders.slice(4,10)">
+        Bestelling #{{ order.id }} - {{ order.orders }}
+      </p>
   </div>
 </div>

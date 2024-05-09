@@ -15,6 +15,10 @@ export class HomeComponent implements OnInit {
   constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
+    this.fetchOrders(); // Haal orders op bij initialisatie
+  }
+
+  fetchOrders() {
     this.orderService.getOrders().subscribe(
       (data) => {
         this.orders = data;
@@ -27,9 +31,24 @@ export class HomeComponent implements OnInit {
 
   toggleOrder(index: number) {
     if (this.expandedOrderIndex === index) {
-      this.expandedOrderIndex = -1; // Collapse the currently expanded order
+      this.expandedOrderIndex = -1; 
     } else {
-      this.expandedOrderIndex = index; // Expand the clicked order
+      this.expandedOrderIndex = index;
     }
+  }
+
+  markOrderAsDone(orderId: number) {
+    this.orderService.markOrderAsDone(orderId).subscribe(
+      () => {
+        // Verwijder de voltooide order uit de lijst
+        this.orders = this.orders.filter(order => order.id !== orderId);
+        
+        // Haal een nieuwe lijst met orders op na het verwijderen
+        this.fetchOrders();
+      },
+      (error) => {
+        console.error('Fout bij het voltooien van de bestelling:', error);
+      }
+    );
   }
 }

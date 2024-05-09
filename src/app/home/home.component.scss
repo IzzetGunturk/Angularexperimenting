@@ -7,10 +7,15 @@
 }
 
 .side-bar {
-  background-color: #374151;
-  padding: 50px;
+  background-color: grey;
+  padding: 30px;
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
+
+  h3 {
+    color:#fff;
+    font-size: 27px;
+  }
 }
 
 .order-screen {
@@ -21,13 +26,13 @@
 .order-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .order-item {
-  width: calc(25% - 20px);
+  width: 260px;
   margin-bottom: 20px;
-  background-color: #374151;
+  background-color: grey;
   padding: 20px;
 }
 
@@ -44,3 +49,8 @@
   flex-direction: row;
   gap: 3px;
 }
+
+.order-details {
+  color: #fff;
+}
+
