@@ -1,6 +1,6 @@
 ﻿# Experimenting with angular
 
-I have programmed a proof of concept (POC) with Angular to experiment with how everything works.
+I have programmed a proof of concept (POC) with Angular to experiment and see how everything works.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
 
